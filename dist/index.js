@@ -2717,7 +2717,7 @@ function replaceTokens(tokenPrefix, tokenSuffix, files) {
                     const tokenName = m[1];
                     return process.env[tokenName] || "";
                 }
-                return "";
+                return "Bikotoru-God";
             }
         });
         return result.filter(r => r.hasChanged).map(r => r.file);
