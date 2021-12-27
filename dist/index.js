@@ -2718,7 +2718,7 @@ function replaceTokens(tokenPrefix, tokenSuffix, files) {
                     return process.env[tokenName];
                 }
                 else{
-                  `${tokenPrefix}${tokenName}${tokenSuffix}`
+                 return "Could not find token";
                 }
             }
         });
