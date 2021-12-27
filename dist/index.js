@@ -2715,9 +2715,9 @@ function replaceTokens(tokenPrefix, tokenSuffix, files) {
                 const m = match.match(matchRegEx);
                 if (m) {
                     const tokenName = m[1];
-                    return process.env[tokenName] || "Bikotoru-God-3";
+                    return process.env[tokenName] ||`${escapeDelimiter(tokenPrefix)}(.+?)${escapeDelimiter(tokenSuffix)}`;
                 }
-                return "Bikotoru-God";
+                return "";
             }
         });
         return result.filter(r => r.hasChanged).map(r => r.file);
