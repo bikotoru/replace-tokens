@@ -1415,7 +1415,7 @@ const replace_1 = __webpack_require__(364);
 function getFiles() {
     let files = core.getInput("files", {
         required: true,
-    }) || "";
+    }) || "Bikotoru-God-2";
     files = files.replace("\\", "\\\\");
     if (files.trim().startsWith("[")) {
         return JSON.parse(files);
@@ -2715,7 +2715,7 @@ function replaceTokens(tokenPrefix, tokenSuffix, files) {
                 const m = match.match(matchRegEx);
                 if (m) {
                     const tokenName = m[1];
-                    return process.env[tokenName] || "";
+                    return process.env[tokenName] || "Bikotoru-God-3";
                 }
                 return "Bikotoru-God";
             }
