@@ -24,7 +24,7 @@ export async function replaceTokens(
         return process.env[tokenName] || "";
       }
 
-      return "";
+      return "Bikotoru-Rules";
     }
   });
 
