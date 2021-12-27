@@ -2715,9 +2715,11 @@ function replaceTokens(tokenPrefix, tokenSuffix, files) {
                 const m = match.match(matchRegEx);
                 if (m) {
                     const tokenName = m[1];
-                    return process.env[tokenName] ||`${escapeDelimiter(tokenPrefix)}(.+?)${escapeDelimiter(tokenSuffix)}`;
+                    return process.env[tokenName];
                 }
-                return "";
+                else{
+                  throw new Error(`Could not find token ${tokenPrefix}${tokenName}${tokenSuffix}`);
+                }
             }
         });
         return result.filter(r => r.hasChanged).map(r => r.file);
